@@ -1,8 +1,8 @@
 /**
  * Lab 1: Task 3 - Plain Node.js HTTP Server using built-in http module
  * Course: Backend Development Fundamentals · Year II Term II · Aurora
- * Faculty: Joel Prashanth D
- * Student: Padipati Nithin
+ * Faculty: shiva teja
+ * Student: P. Nithin Chowdary
  */
 
 const http = require('http');
