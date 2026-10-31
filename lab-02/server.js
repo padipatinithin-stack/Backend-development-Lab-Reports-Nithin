@@ -1,8 +1,9 @@
 /**
  * Lab 2: SQLite database and CRUD routes
  * Backend Development Fundamentals · Year II Term II · Aurora
- * Faculty: Joel Prashanth D
+ * Faculty: shiva teja
  * Student: Padipati Nithin
+ * Regestration No: 252U1R1173
  */
 
 const express = require('express');
