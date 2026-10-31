@@ -12,7 +12,7 @@
 | Lab | Title | Folder | Status |
 | :--- | :--- | :--- | :--- |
 | **Lab 01** | Node.js and Express server | [`/lab-01`](./lab-01) | Completed |
-| **Lab 02** | *Upcoming* | `/lab-02` | - |
+| **Lab 02** | SQLite database and CRUD routes | [`/lab-02`](./lab-02) | Completed |
 | **Lab 03** | *Upcoming* | `/lab-03` | - |
 | **Lab 04** | *Upcoming* | `/lab-04` | - |
 | **Lab 05** | *Upcoming* | `/lab-05` | - |
@@ -28,3 +28,4 @@
 - One central repository for the entire course with folders `lab-01` to `lab-10`.
 - Each lab contains its dedicated `README.md`, dependencies, clean Git history, and endpoints documentation.
 - `node_modules` and sensitive `.env` files are strictly excluded from version control via `.gitignore`.
+- Database files and testing screenshots are preserved in their respective lab folders.
