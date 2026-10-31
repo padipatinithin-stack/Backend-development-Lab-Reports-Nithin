@@ -1,6 +1,6 @@
 # Backend Development Fundamentals - Lab Reports
 
-**Student:** Padipati Nithin  
+**Student:** P. Nithin Chowdary  
 **Course:** Backend Development Fundamentals · Year II Term II · Aurora  
 **Faculty:** shiva teja  
 **Repository:** [Backend-development-Lab-Reports-Nithin](https://github.com/padipatinithin-stack/Backend-development-Lab-Reports-Nithin)
