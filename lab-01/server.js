@@ -3,7 +3,7 @@
  * Course: Backend Development Fundamentals · Year II Term II · Aurora
  * Faculty: Shiva Teja
  * Student: P. Nithin Chowdary
- * Regestration No: 252U1R1173
+ * Registration No: 252U1R1173
  * Tasks:
  *  - GET /      : Welcome text
  *  - GET /about : JSON with name and section
@@ -16,7 +16,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-// Middleware: Request Logger (Logs method, URL, and response status code)
+// Middleware: Request Logger
 app.use((req, res, next) => {
   const start = Date.now();
   res.on('finish', () => {
@@ -34,12 +34,12 @@ app.get('/', (req, res) => {
 // Route 2: GET /about (JSON with name, registration number, section, and module)
 app.get('/about', (req, res) => {
   res.status(200).json({
-    name: "Padipati Nithin",
-    registrationNumber: "ENTER_YOUR_REG_NO",
-    section: "Section A",
+    name: "P. Nithin Chowdary",
+    registrationNumber: "252U1R1173",
+    section: "CSE-2D",
     module: "Node.js and Express.js fundamentals",
     course: "Backend Development Fundamentals - Year II Term II",
-    faculty: "Joel Prashanth D"
+    faculty: "Shiva Teja"
   });
 });
 
@@ -73,13 +73,17 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start the Express server
-app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(` Express server listening on http://localhost:${PORT}`);
-  console.log(` Available endpoints:`);
-  console.log(`  - GET  /`);
-  console.log(`  - GET  /about`);
-  console.log(`  - GET  /time`);
-  console.log(`====================================================`);
-});
+// Start the Express server when running as a standalone service
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(` Express server listening on http://localhost:${PORT}`);
+    console.log(` Available endpoints:`);
+    console.log(`  - GET  /`);
+    console.log(`  - GET  /about`);
+    console.log(`  - GET  /time`);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;

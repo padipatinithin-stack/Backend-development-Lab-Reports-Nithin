@@ -9,8 +9,8 @@
 ---
 
 ### Live Link
-- **Deployment URL:** [https://backend-development-lab-reports-nithin.onrender.com](https://backend-development-lab-reports-nithin.onrender.com)  
-*(Note: If live cloud deployment is pending or inaccessible, verify endpoints locally as demonstrated in the screenshots below).*
+- **Deployment URL (Render):** [https://lab-01-node-express-nithin.onrender.com](https://lab-01-node-express-nithin.onrender.com)  
+*(Note: If the live cloud service is sleeping on the free tier, allow 30–50 seconds for cold start or refer to the endpoint verification screenshots below).*
 
 ---
 
@@ -70,7 +70,7 @@ PORT=3000
 | `main` | Entry point of the application (`server.js`). |
 | `scripts` | CLI shortcuts for running the app (`start`, `dev`, `start:http`). |
 | `keywords` | Array of relevant tags for classification. |
-| `author` | Author name (`Padipati Nithin`). |
+| `author` | Author name (`P. Nithin Chowdary`). |
 | `license` | License identifier for software distribution (`ISC`). |
 | `dependencies` | Third-party npm packages required at runtime (`express`). |
 

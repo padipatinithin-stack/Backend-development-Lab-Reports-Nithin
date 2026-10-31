@@ -1,24 +1,66 @@
 /**
  * Lab 2: SQLite database and CRUD routes
  * Backend Development Fundamentals · Year II Term II · Aurora
- * Faculty: shiva teja
- * Student: Padipati Nithin
- * Regestration No: 252U1R1173
+ * Faculty: Shiva Teja
+ * Student: P. Nithin Chowdary
+ * Registration No: 252U1R1173
+ * Section: CSE-2D
  */
 
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const { open } = require('sqlite');
 const sqlite3 = require('sqlite3');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const dbPath = path.join(__dirname, 'books.db');
+
+// Resolve DB path (Support persistent local/Render storage or /tmp in Vercel serverless)
+let activeDbPath = path.join(__dirname, 'books.db');
+if (process.env.VERCEL) {
+  const tmpPath = path.join('/tmp', 'books.db');
+  if (!fs.existsSync(tmpPath) && fs.existsSync(activeDbPath)) {
+    fs.copyFileSync(activeDbPath, tmpPath);
+  }
+  activeDbPath = tmpPath;
+}
 
 let db = null;
 
+// Helper to ensure database is opened
+const getDB = async () => {
+  if (db) return db;
+  db = await open({
+    filename: activeDbPath,
+    driver: sqlite3.Database,
+  });
+
+  await db.exec(`
+    CREATE TABLE IF NOT EXISTS book (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      title TEXT NOT NULL,
+      author TEXT NOT NULL,
+      price INTEGER NOT NULL,
+      pages INTEGER NOT NULL
+    );
+  `);
+  return db;
+};
+
 // Middleware to parse JSON request bodies
 app.use(express.json());
+
+// Ensure DB is connected for every request
+app.use(async (req, res, next) => {
+  try {
+    await getDB();
+    next();
+  } catch (err) {
+    console.error('Database middleware connection error:', err);
+    res.status(500).json({ error: 'Database connection failed', details: err.message });
+  }
+});
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -42,9 +84,12 @@ app.get('/', (req, res) => {
       deleteBook: 'DELETE /books/:bookId/',
     },
     student: {
-      name: 'Padipati Nithin',
+      name: 'P. Nithin Chowdary',
+      registrationNumber: '252U1R1173',
+      section: 'CSE-2D',
       course: 'Backend Development Fundamentals',
       module: 'SQLite and relational database operations',
+      faculty: 'Shiva Teja'
     },
   });
 });
@@ -227,37 +272,25 @@ app.use((req, res) => {
   });
 });
 
-// Task 3: initializeDBAndServer() async function
+// Task 3: initializeDBAndServer() async function (starts server on Render/Local)
 const initializeDBAndServer = async () => {
   try {
-    db = await open({
-      filename: dbPath,
-      driver: sqlite3.Database,
-    });
+    await getDB();
 
-    // Ensure the table exists even if fresh db file
-    await db.exec(`
-      CREATE TABLE IF NOT EXISTS book (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL,
-        author TEXT NOT NULL,
-        price INTEGER NOT NULL,
-        pages INTEGER NOT NULL
-      );
-    `);
-
-    app.listen(PORT, () => {
-      console.log('====================================================');
-      console.log(` SQLite Database connected at: ${dbPath}`);
-      console.log(` Server is running on http://localhost:${PORT}`);
-      console.log(' Available CRUD Routes:');
-      console.log('   - GET    /books/');
-      console.log('   - GET    /books/:bookId/');
-      console.log('   - POST   /books/');
-      console.log('   - PUT    /books/:bookId/');
-      console.log('   - DELETE /books/:bookId/');
-      console.log('====================================================');
-    });
+    if (!process.env.VERCEL) {
+      app.listen(PORT, () => {
+        console.log('====================================================');
+        console.log(` SQLite Database connected at: ${activeDbPath}`);
+        console.log(` Server is running on http://localhost:${PORT}`);
+        console.log(' Available CRUD Routes:');
+        console.log('   - GET    /books/');
+        console.log('   - GET    /books/:bookId/');
+        console.log('   - POST   /books/');
+        console.log('   - PUT    /books/:bookId/');
+        console.log('   - DELETE /books/:bookId/');
+        console.log('====================================================');
+      });
+    }
   } catch (error) {
     console.error(`Database Connection Error: ${error.message}`);
     process.exit(1);
@@ -265,3 +298,5 @@ const initializeDBAndServer = async () => {
 };
 
 initializeDBAndServer();
+
+module.exports = app;

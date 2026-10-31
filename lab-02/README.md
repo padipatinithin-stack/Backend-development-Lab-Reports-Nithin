@@ -9,8 +9,8 @@
 ---
 
 ### Live Link
-- **Deployment URL:** [https://backend-development-lab-reports-nithin.onrender.com](https://backend-development-lab-reports-nithin.onrender.com)  
-*(Note: If live cloud deployment is inaccessible, full endpoint verification with Postman & SQLite CLI output is provided below).*
+- **Deployment URL (Render):** [https://lab-02-sqlite-crud-nithin.onrender.com](https://lab-02-sqlite-crud-nithin.onrender.com)  
+*(Note: If the live cloud service is sleeping on the free tier, allow 30–50 seconds for cold start or refer to the endpoint verification screenshots below).*
 
 ---
 
