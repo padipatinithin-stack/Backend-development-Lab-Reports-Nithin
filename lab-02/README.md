@@ -2,7 +2,7 @@
 
 **Student Name:** P. Nithin Chowdary  
 **Registration Number:** 252U1R1173  
-**Section:** Section A  
+**Section:** CSE-2D  
 **Course:** Backend Development Fundamentals (Year II Term II)  
 **Faculty:** Shiva Teja  
 
