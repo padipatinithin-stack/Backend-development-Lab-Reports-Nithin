@@ -1,0 +1,22 @@
+{
+  "name": "lab-01-node-express",
+  "version": "1.0.0",
+  "description": "Lab 1: Node.js and Express server - Backend Development Fundamentals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "start:http": "node server-http.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend",
+    "rest-api"
+  ],
+  "author": "Padipati Nithin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
