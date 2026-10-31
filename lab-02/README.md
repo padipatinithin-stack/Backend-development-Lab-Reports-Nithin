@@ -1,10 +1,10 @@
 # Lab 2: SQLite database and CRUD routes
 
-**Student Name:** Padipati Nithin  
-**Registration Number:** ENTER_YOUR_REG_NO  
+**Student Name:** P. Nithin Chowdary  
+**Registration Number:** 252U1R1173  
 **Section:** Section A  
 **Course:** Backend Development Fundamentals (Year II Term II)  
-**Faculty:** Joel Prashanth D  
+**Faculty:** Shiva Teja  
 
 ---
 
