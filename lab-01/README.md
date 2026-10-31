@@ -1,10 +1,10 @@
 # Lab 1: Node.js and Express server
 
-**Student Name:** Padipati Nithin  
-**Registration Number:** ENTER_YOUR_REG_NO  
-**Section:** Section A  
+**Student Name:** P. Nithin Chowdary  
+**Registration Number:** 252U1R1173  
+**Section:** CSE-2D  
 **Course:** Backend Development Fundamentals (Year II Term II)  
-**Faculty:** Joel Prashanth D  
+**Faculty:** Shiva Teja  
 
 ---
 
