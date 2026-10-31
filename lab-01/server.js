@@ -2,8 +2,8 @@
  * Lab 1: Node.js and Express Server
  * Course: Backend Development Fundamentals · Year II Term II · Aurora
  * Faculty: Joel Prashanth D
- * Student: Padipati Nithin
- *
+ * Student: P. Nithin Chowdary
+ * Regestration No: 252U1R1173
  * Tasks:
  *  - GET /      : Welcome text
  *  - GET /about : JSON with name and section
