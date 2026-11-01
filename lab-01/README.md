@@ -9,7 +9,7 @@
 ---
 
 ### Live Link
-- **Deployment URL (Vercel):** [https://lab-01-node-express-nithin.onrender.com](https://lab-01-node-express-nithin.onrender.com)  
+- **Deployment URL (Vercel):** [https://lab-01-node-express-nithin.onrender.com](https://backend-development-lab-reports-nit-green.vercel.app/)  
 *(Note: If the live cloud service is sleeping on the free tier, allow 30–50 seconds for cold start or refer to the endpoint verification screenshots below).*
 
 ---
