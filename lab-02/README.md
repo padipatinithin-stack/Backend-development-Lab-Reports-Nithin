@@ -9,7 +9,7 @@
 ---
 
 ### Live Link
-- **Deployment URL (Render):** [https://backend-development-lab-reports-nit-iota.vercel.app/](https://backend-development-lab-reports-nit-iota.vercel.app/)  
+- **Deployment URL (Vercel):** [https://backend-development-lab-reports-nit-iota.vercel.app/](https://backend-development-lab-reports-nit-iota.vercel.app/)  
 *(Note: If the live cloud service is sleeping on the free tier, allow 30–50 seconds for cold start or refer to the endpoint verification screenshots below).*
 
 ---
