@@ -9,7 +9,7 @@
 ---
 
 ### Live Link
-- **Deployment URL (Vercel):** [[https://backend-development-lab-reports-nit-lab03.vercel.app/](https://backend-development-lab-reports-nit-lab03.vercel.app/)](https://lab-03-theta.vercel.app/)  
+- **Deployment URL (Vercel):** (https://lab-03-theta.vercel.app/)  
 *(To deploy on Vercel: Import this repository into Vercel, set the **Root Directory** to `lab-03`, and click Deploy).*
 
 ---
