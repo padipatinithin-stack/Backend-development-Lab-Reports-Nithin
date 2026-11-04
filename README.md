@@ -13,7 +13,7 @@
 | :--- | :--- | :--- | :--- |
 | **Lab 01** | Node.js and Express server | [`/lab-01`](./lab-01) | Completed |
 | **Lab 02** | SQLite database and CRUD routes | [`/lab-02`](./lab-02) | Completed |
-| **Lab 03** | *Upcoming* | `/lab-03` | - |
+| **Lab 03** | REST API, query parameters, validation, debugging | [`/lab-03`](./lab-03) | Completed |
 | **Lab 04** | *Upcoming* | `/lab-04` | - |
 | **Lab 05** | *Upcoming* | `/lab-05` | - |
 | **Lab 06** | *Upcoming* | `/lab-06` | - |

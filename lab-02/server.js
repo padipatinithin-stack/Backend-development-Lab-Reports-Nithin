@@ -16,7 +16,7 @@ const sqlite3 = require('sqlite3');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Resolve DB path (Support persistent local/Render storage or /tmp in Vercel serverless)
+// Resolve DB path (Support persistent local storage or /tmp in Vercel serverless)
 let activeDbPath = path.join(__dirname, 'books.db');
 if (process.env.VERCEL) {
   const tmpPath = path.join('/tmp', 'books.db');
@@ -272,7 +272,7 @@ app.use((req, res) => {
   });
 });
 
-// Task 3: initializeDBAndServer() async function (starts server on Render/Local)
+// Task 3: initializeDBAndServer() async function (starts server locally)
 const initializeDBAndServer = async () => {
   try {
     await getDB();
